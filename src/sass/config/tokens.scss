@@ -1,0 +1,35 @@
+/* SIZES */
+$width-laptop: 1200px;
+$width-tablet: 900px;
+$width-phone: 650px;
+$width-wrapper: 1200px;
+
+
+/* UNITS */
+$unit-xs: 1rem;
+$unit-s: 2rem;
+$unit-m: 3rem;
+$unit-l: 4rem;
+$unit-xl: 6rem;
+$unit-xxl: 8rem;
+$unit-xxxl: 16rem;
+
+
+/* COLORS */
+$color-alpha: #0F4D63;
+$color-alpha-light: #4F8DA3;
+
+$color-beta: #2B2B2B;
+$color-beta-light: #555555;
+$color-beta-light2: #A5A5A5;
+
+$color-gamma: #FFFFFF;
+$color-gamma-light: #EBEBEB;
+
+
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+$font-alpha: 'Bebas Neue', sans-serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Palanquin:wght@400;600&display=swap');
+$font-beta: 'Palanquin', sans-serif;

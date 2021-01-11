@@ -42,12 +42,14 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Desgin System",
+      title: "Desgin System von jessica-hein.de",
+      description:"Sammlung der Designinhalte von jessica-hein.de.",
       template: "src/design-system.html",
       filename: "design-system.html",
     }),
     new HtmlWebpackPlugin({
-      title: "My Index",
+      title: "Illustrator, Grafik- und Webdesigner Jessica Hein",
+      description:"Jessica Hein, Dein professioneller Illustrator, Grafik- und Webdesigner.",
       template: "src/index.html",
       filename: "index.html",
     }),
