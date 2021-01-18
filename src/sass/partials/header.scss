@@ -1,8 +1,18 @@
-.header-partial {
-  background-color: $color-alpha;
+#header {
+  display: flex;
+  justify-content: center;
 
-  h1{
-    font-size: $unit-xl;
-    font-family: $font-beta;
+  .logo{
+    background: url(../../images/logo.svg) no-repeat center;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .mainnav{
+    ul{
+          display: flex;
+    justify-content: center;
+    }
   }
 }
