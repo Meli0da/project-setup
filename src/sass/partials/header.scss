@@ -1,9 +1,13 @@
 #header {
+  margin-top: $unit-s;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
 
   .logo{
-    background: url(../../images/logo.svg) no-repeat center;
+    background: url(../../images/logo.svg) black no-repeat center;
+    width: $unit-xxxl;
+    height: $unit-xxl;
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
@@ -11,8 +15,40 @@
 
   .mainnav{
     ul{
-          display: flex;
-    justify-content: center;
+     display: flex;
+     align-items: center;
+
+     li{
+      margin-left: $unit-m;
+     }
+
+     li a{
+       font-family: $font-primary;
+       font-size: $unit-m;
+       text-decoration: none;
+       color: $color-secondary;
+     }
+
+     li a.sm{
+      display: block;
+      width: $unit-xl;
+      height: $unit-xl;
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+
+      &.instagram{
+        background: url(../../images/instagram.svg) black no-repeat center;
+      }
+
+      &.linkedin{
+        background: url(../../images/linkedin.svg) black no-repeat center;
+      }
+
+      &.telegram{
+        background: url(../../images/telegram.svg) black no-repeat center;
+      }
+     }
     }
   }
 }
