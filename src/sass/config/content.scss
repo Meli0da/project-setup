@@ -1,0 +1,32 @@
+#main{
+    margin-top: 6rem;
+
+    .bg_secondary{
+        background-color: $color-secondary-light2;
+    }
+
+    #heroimage{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: calc(100vh - 6rem);
+
+        p{
+            font-family: $font-primary;
+            font-size: $unit-l;
+            color: $color-secondary;
+
+            span{
+                display: block;
+                font-size: $unit-xxl;
+            }
+        }
+
+        img{
+            height: 60vh;
+            width: 35vh;
+            background: black;
+        }
+    }
+}

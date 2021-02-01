@@ -1,11 +1,16 @@
 #header {
-  margin-top: $unit-s;
   display: flex;
+  position: fixed;
   justify-content: space-between;
   align-items: center;
+  top: 0;
+  width: calc(100% - 2rem);
+  background: $color-tertiary;
+  margin: 0 auto; 
+  padding: $unit-s; 
 
   .logo{
-    background: url(../../images/logo.svg) black no-repeat center;
+    background: url(images/logo.svg) no-repeat center;
     width: $unit-xxxl;
     height: $unit-xxl;
     text-indent: 100%;
@@ -15,39 +20,66 @@
 
   .mainnav{
     ul{
-     display: flex;
-     align-items: center;
+      display: flex;
+      align-items: center;
 
      li{
-      margin-left: $unit-m;
-     }
+        position: relative;
+        margin-left: $unit-m;
 
-     li a{
-       font-family: $font-primary;
-       font-size: $unit-m;
-       text-decoration: none;
-       color: $color-secondary;
-     }
+        a{
+          font-family: $font-primary;
+          font-size: $unit-m;
+          text-decoration: none;
+          color: $color-secondary;
+          transition: color 2s;
+   
+          &:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #000;
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.2s ease-in-out 0s;
+         }
+   
+          &:hover, &.active{
 
-     li a.sm{
-      display: block;
-      width: $unit-xl;
-      height: $unit-xl;
-      text-indent: 100%;
-      white-space: nowrap;
-      overflow: hidden;
+            &:before {
+              visibility: visible;
+              transform: scaleX(1);
+            }
+          }
+        }
 
-      &.instagram{
-        background: url(../../images/instagram.svg) black no-repeat center;
-      }
+        .sm{
+          display: block;
+          width: $unit-xl;
+          height: $unit-xl;
+          text-indent: 100%;
+          white-space: nowrap;
+          overflow: hidden;
+    
+          &.instagram{
+            background: url(images/instagram.svg) black no-repeat center;
+          }
+    
+          &.linkedin{
+            background: url(images/linkedin.svg) black no-repeat center;
+          }
+    
+          &.telegram{
+            background: url(images/telegram.svg) black no-repeat center;
+          }
 
-      &.linkedin{
-        background: url(../../images/linkedin.svg) black no-repeat center;
-      }
-
-      &.telegram{
-        background: url(../../images/telegram.svg) black no-repeat center;
-      }
+          &:before {
+            display: none;
+         }
+        }
      }
     }
   }

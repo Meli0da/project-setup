@@ -1,5 +1,7 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+const copyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -53,7 +55,20 @@ module.exports = {
       template: "src/index.html",
       filename: "index.html",
     }),
+    new copyWebpackPlugin({
+      patterns: [
+        {
+        from: "src/images",
+         to: "images",
+        },
+        {
+        from: "src/favicons", 
+        to: "favicons"
+        }
+      ] 
+    }),
   ],
+
   devServer: {
     contentBase: path.join(__dirname, "dist"),
     compress: true,
