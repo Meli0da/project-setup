@@ -55,31 +55,6 @@
             }
           }
         }
-
-        .sm{
-          display: block;
-          width: $unit-xl;
-          height: $unit-xl;
-          text-indent: 100%;
-          white-space: nowrap;
-          overflow: hidden;
-    
-          &.instagram{
-            background: url(images/instagram.svg) black no-repeat center;
-          }
-    
-          &.linkedin{
-            background: url(images/linkedin.svg) black no-repeat center;
-          }
-    
-          &.telegram{
-            background: url(images/telegram.svg) black no-repeat center;
-          }
-
-          &:before {
-            display: none;
-         }
-        }
      }
     }
   }

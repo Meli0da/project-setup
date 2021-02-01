@@ -1,0 +1,28 @@
+#footer {
+  padding-top: $unit-xl;
+  background-color: $color-primary-light;
+
+  .smnav ul, .footernav ul{
+    display: flex;
+    justify-content: center;
+
+    li{
+      padding: 0 $unit-s;
+    }
+  }
+
+  .smnav{
+    padding-bottom: $unit-xl;
+  }
+
+  .footernav{
+   background-color: $color-primary;
+    padding:  $unit-s 0;
+
+    a{
+      font-family: $font-secondary;
+      color: $color-tertiary;
+      text-decoration: none;
+    }
+  }
+}
