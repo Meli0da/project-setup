@@ -2,6 +2,7 @@
 <html>
   <head>
     <%= require('html-loader!./partials/head.html') %>
+    <%= require('html-loader!./partials/icons.html') %>
     <!-- SPECIFICS  -->
     <meta name="robots" content="index,follow">
     <title><%= htmlWebpackPlugin.options.title %></title>
@@ -16,29 +17,28 @@
       <%= require('html-loader!./partials/header.html') %>
 
       <!-- HEROIMAGE  -->
-      <section id="heroimage" >
-        <div>
-          <p><span>Jessica Hein</span> Illustrator, Grafikdesigner & Webdesigner</p>
+      <section class="heroimage" >
+          <p>Jessica Hein <span>Illustrator, Grafikdesigner & Webdesigner</span></p>
           <nav class="smnav">
             <ul>
-              <li><a href="https://www.linkedin.com/jhein_design/" target="blank" title="Zu Jessica Heins Linkedinprofil wechseln"><img src="icons/linkedin.svg" alt="Logo Linkedin"></a></li>
-              <li><a href="https://www.instagram.com/jhein_design/" target="blank" title="Zu Jessica Heins Instagramprofil wechseln"><img src="icons/instagram.svg" alt="Logo Instagram"></a></li>
-              <li><a href="https://www.xing.com/jhein_design/" target="blank" title="Zu Jessica Heins Xingprofil wechseln"><img src="icons/xing.svg" alt="Logo Xing"></a></li>
+              <li><a href="https://www.linkedin.com/jhein_design/" target="blank" title="Zu Jessica Heins Linkedinprofil wechseln"><svg xmlns="http://www.w3.org/2000/svg"><use xlink:href="#linkedin"/></svg></a></li>
+              <li><a href="https://www.instagram.com/jhein_design/" target="blank" title="Zu Jessica Heins Instagramprofil wechseln"><svg xmlns="http://www.w3.org/2000/svg"><use xlink:href="#instagram"/></svg></a></li>
+              <li><a href="https://www.xing.com/jhein_design/" target="blank" title="Zu Jessica Heins Xingprofil wechseln"><svg xmlns="http://www.w3.org/2000/svg"><use xlink:href="#xing"/></svg></a></li>
             </ul>
           </nav>
-        </div>
-
-        <img class="illustration" src="images/jessie.svg" alt="Illustration von Jessica Hein">
       </section>
 
-      <!-- INTRODUCTION  -->
+      <img class="illustration1" src="images/jessie.svg" alt="Illustration von Jessica Hein">
+
+
+      <!-- INTRODUCTION  
       <section class="bg_secondary">
         <h2>Erste Überschrift</h2>
         <P>Platzhaltertext</P>
-      </section>
+      </section>-->
 
-      <!-- FOOTER  -->
-      <%= require('html-loader!./partials/footer.html') %>
+      <!-- FOOTER 
+      <%= require('html-loader!./partials/footer.html') %> -->
 
   </body>
 </html>

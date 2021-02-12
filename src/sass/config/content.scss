@@ -1,40 +1,69 @@
 #main{
-    margin-top: 6rem;
 
-    .smnav ul{
-      display: flex;
-      width: 12rem;
-      justify-content: space-between;
-      
-      img{
+  /* HEROIMAGE */
+  .heroimage{
+    grid-area: heroimage;
+    align-self: center;
+    margin-top: $unit-xxxl;
+
+    p{
+      position: relative;
+      font-family: $font-primary;
+      color: $color-secondary;
+      font-size: 6rem;
+      padding-bottom: $unit-m;
+
+      span{
         display: block;
-        width: $unit-xl;
-        height: $unit-xl;
-      }      
-    }
-
-    #heroimage{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      height: calc(100vh - 6rem);
-
-      p{
-        font-family: $font-primary;
+        font-family: $font-secondary;
         font-size: $unit-l;
-        color: $color-secondary;
+        font-weight: 600;
+        text-transform: uppercase;
+        max-width: 30rem;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: $unit-xxxl;
+        bottom: 0;
+        left: 0;
+        background-color: $color-secondary-light;
+      }
+
+      @media only screen and (max-width: $width-laptop){
+        font-size: $unit-xxl;
 
         span{
-          display: block;
-          font-size: $unit-xxl;
-         }
-      }
-
-      .illustration{
-          height: 60vh;
-          width: 35vh;
-          margin-right: $unit-xxxl;
+          font-size: $unit-m;
+        }
       }
     }
-}
+
+    .smnav{
+      margin-top: $unit-m;
+    }
+  }   
+  
+  .illustration1{
+    grid-area: illustration1;
+    place-self: center end;
+    max-width: 25vw;
+    height: auto;
+    width: 100%;
+  }
+
+  /* SOCIAL MEDIA BUTTONS */
+  .smnav ul{
+    display: flex;
+    width: 12rem;
+    justify-content: space-between;
+      
+    svg{
+      display: block;
+      width: $unit-xl;
+      height: $unit-xl;
+    }      
+  }
+} 

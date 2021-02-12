@@ -1,8 +1,23 @@
-/* WRAPPER */
-.wrapper{
-  margin: 0 auto; 
-  max-width: $width-wrapper; 
-  width: calc(100% - 2rem);
+/* GRID */
+#main{
+  display: grid;
+  grid-template-columns:  repeat(12, 1fr);
+  grid-template-rows:  6rem calc(100vh - 6rem) 1fr;
+  column-gap: $unit-s;
+  grid-template-areas: 
+  "header header header header header header header header header header header header"
+  ". heroimage heroimage heroimage heroimage heroimage heroimage illustration1 illustration1 illustration1 illustration1 . "
+  "footer footer footer footer footer footer footer footer footer footer footer footer";
+  max-width: $width-wrapper;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  @media only screen and (max-width: $width-laptop){
+    grid-template-areas: 
+    "header header header header header header header header header header header header"
+    ". heroimage heroimage heroimage heroimage heroimage illustration1 illustration1 illustration1 illustration1 illustration1 . "
+    "footer footer footer footer footer footer footer footer footer footer footer footer";
+  }
 }
 
 
@@ -10,7 +25,7 @@
 .desktop{
   display: block;
 
-  @media only screen and (max-width: $width-phone){
+  @media only screen and (max-width: $width-tablet){
     display: none;
   }
 } 
@@ -18,12 +33,11 @@
 .mobile{
   display: none;
 
-  @media only screen and (max-width: $width-phone){
+  @media only screen and (max-width: $width-tablet){
     display: block;
   }
 } 
  
-
 
 /* BACKGROUNDS */
 .bg_secondary{

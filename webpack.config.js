@@ -125,10 +125,6 @@ module.exports = {
         {
           from: "src/favicons", 
           to: "favicons"
-        },
-        {
-          from: "src/icons", 
-          to: "icons"
         }
       ] 
     }),
