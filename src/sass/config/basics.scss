@@ -21,4 +21,11 @@
   @media only screen and (max-width: $width-phone){
     display: block;
   }
-}  
+} 
+ 
+
+
+/* BACKGROUNDS */
+.bg_secondary{
+  background-color: $color-secondary-light3;
+}

@@ -2,23 +2,21 @@
 <html>
   <head>
     <%= require('html-loader!./partials/head.html') %>
-    <!-- Specifics  -->
-    <meta name="robots" content="noindex,nofollow">
+    <!-- SPECIFICS  -->
+    <meta name="robots" content="index,follow">
     <title><%= htmlWebpackPlugin.options.title %></title>
     <meta name="description" content="<%= htmlWebpackPlugin.options.description %>">
     <!-- CSS  -->
     <link rel="stylesheet" href="index.css" />
   </head>
 
-  <body>
-    <details open>
-      <summary>Header Partial</summary>
-      <%= require('html-loader!./partials/header.html') %>
-    </details>
+  <body id="main">
 
-    <details open>
-      <summary>Footer Partial</summary>
+      <!-- HEADER  -->
+      <%= require('html-loader!./partials/header.html') %>
+
+      <!-- FOOTER  -->
       <%= require('html-loader!./partials/footer.html') %>
-    </details>
+
   </body>
 </html>
