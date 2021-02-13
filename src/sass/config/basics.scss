@@ -1,22 +1,156 @@
+html{
+  scroll-behavior: smooth;
+}
+
 /* GRID */
 #main{
   display: grid;
   grid-template-columns:  repeat(12, 1fr);
-  grid-template-rows:  6rem calc(100vh - 6rem) 1fr;
+  grid-template-rows:  6rem calc(100vh - 6rem) auto auto auto;
   column-gap: $unit-s;
   grid-template-areas: 
   "header header header header header header header header header header header header"
   ". heroimage heroimage heroimage heroimage heroimage heroimage illustration1 illustration1 illustration1 illustration1 . "
+  ". illustration2 illustration2 illustration2 . . intro intro intro intro . . "
+  ". portfolio portfolio portfolio portfolio portfolio portfolio portfolio portfolio portfolio portfolio . "
+  ". cta cta cta cta cta cta cta cta cta cta . "
   "footer footer footer footer footer footer footer footer footer footer footer footer";
   max-width: $width-wrapper;
   margin: 0 auto;
-  padding: 0 1rem;
+
+  @media only screen and (max-width: $width-maxi){
+    grid-template-areas: 
+    "header header header header header header header header header header header header"
+    ". heroimage heroimage heroimage heroimage heroimage heroimage illustration1 illustration1 illustration1 illustration1 . "
+    ". illustration2 illustration2 illustration2 . intro intro intro intro intro intro . "
+    ". portfolio portfolio portfolio portfolio portfolio portfolio portfolio portfolio portfolio portfolio . "
+    ". cta cta cta cta cta cta cta cta cta cta . "
+    "footer footer footer footer footer footer footer footer footer footer footer footer";
+  }
 
   @media only screen and (max-width: $width-laptop){
     grid-template-areas: 
     "header header header header header header header header header header header header"
     ". heroimage heroimage heroimage heroimage heroimage illustration1 illustration1 illustration1 illustration1 illustration1 . "
+    ". illustration2 illustration2 illustration2 . intro intro intro intro intro intro . "
+    ". portfolio portfolio portfolio portfolio portfolio portfolio portfolio portfolio portfolio portfolio . "
+    ". cta cta cta cta cta cta cta cta cta cta . "
     "footer footer footer footer footer footer footer footer footer footer footer footer";
+  }
+
+  @media only screen and (max-width: $width-tablet){
+    grid-template-rows:  6rem 60vh 22vh auto auto auto auto;
+    grid-template-areas: 
+    "header header header header header header header header header header header header"
+    ". illustration1 illustration1 illustration1 illustration1 illustration1 illustration1 illustration1 illustration1 illustration1 illustration1 . "
+    ". heroimage heroimage heroimage heroimage heroimage heroimage heroimage heroimage heroimage heroimage . "
+    ". illustration2 illustration2 illustration2 illustration2 illustration2 illustration2 illustration2 illustration2 illustration2 illustration2 . "
+    ". intro intro intro intro intro intro intro intro intro intro . "
+    ". portfolio portfolio portfolio portfolio portfolio portfolio portfolio portfolio portfolio portfolio . "
+    "cta cta cta cta cta cta cta cta cta cta cta cta "
+    "footer footer footer footer footer footer footer footer footer footer footer footer";
+  }
+}
+
+
+/* HEADLINES */
+h2{
+  font-family: $font-primary;
+  font-size: $unit-xl;
+  color: $color-secondary;
+  margin-bottom: $unit-l;
+
+  span{
+    display: block;
+    font-size: $unit-l;
+  }
+
+  @media only screen and (max-width: $width-tablet){
+    font-size: $unit-l;
+
+    span{
+      font-size: $unit-m;
+    }
+  }
+}
+
+/* TEXT */
+p{
+  font-family: $font-secondary;
+  font-size: 1.2rem;
+  color: $color-secondary;
+  margin-bottom: $unit-l;
+}
+
+.strong{
+  font-weight: 600;
+}
+
+
+/* BUTTONS */
+.btn{
+  font-family: $font-secondary;
+  font-size: $unit-s;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $color-quaternary;
+  border-radius: .25rem;
+  filter: drop-shadow(2px 4px 3px rgba(0, 0, 0, 0.25));
+  padding: $unit-s $unit-l;
+  transition: all 0.2s;
+
+  &:hover, &:active{
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.25));
+    padding: 16px 31px 15px 31px;
+    margin: 1px 1px 0 1px;
+  }
+
+  &._primary{
+    background-color: $color-primary;
+
+    &:hover, &:active{
+      background-color: $color-primary-dark;
+    }
+  }
+
+  &._tertiary{
+    background-color: $color-tertiary;
+
+    &:hover, &:active{
+      background-color: $color-tertiary-dark;
+    }
+  }
+
+  &._quaternary{
+    color: $color-secondary;
+    background-color: $color-quaternary;
+
+    &:hover, &:active{
+      background-color: $color-secondary-light3;
+    }
+  }
+}
+
+.btns{
+  display: flex;
+
+  :last-child{
+    margin-left: $unit-l;
+  }
+
+  @media only screen and (max-width: $width-tablet){
+    flex-direction: column;
+    align-items: center;
+
+    .btn{
+      text-align: center;
+      width: 10rem;
+
+      &:last-child{
+        margin-left: 0;
+        margin-top: $unit-m;
+      }
+    }
   }
 }
 
@@ -37,9 +171,3 @@
     display: block;
   }
 } 
- 
-
-/* BACKGROUNDS */
-.bg_secondary{
-  background-color: $color-secondary-light3;
-}

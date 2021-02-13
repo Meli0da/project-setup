@@ -1,7 +1,8 @@
 #main{
 
+  
   /* HEROIMAGE */
-  .heroimage{
+  #heroimage{
     grid-area: heroimage;
     align-self: center;
     margin-top: $unit-xxxl;
@@ -31,8 +32,18 @@
         left: 0;
         background-color: $color-secondary-light;
       }
+    }
 
-      @media only screen and (max-width: $width-laptop){
+    .smnav{
+      margin-top: $unit-m;
+
+      @media only screen and (max-width: $width-tablet){
+        display: none;
+       }
+    }
+
+    @media only screen and (max-width: $width-laptop){
+      p{
         font-size: $unit-xxl;
 
         span{
@@ -41,18 +52,84 @@
       }
     }
 
-    .smnav{
+    @media only screen and (max-width: $width-tablet){
+      align-self: self-start;
       margin-top: $unit-m;
+
+      p:before{
+        display: none;
+      }
+    }
+
+    @media only screen and (max-width: $width-phone){
+      p{
+        font-size: $unit-xl;
+
+        span{
+          font-size: 1.2rem;
+          max-width: 25rem;
+        }
+      }
+    }
+
+    @media only screen and (max-width: $width-mini){
+
+      p{
+        font-size: $unit-l;
+
+        span{
+          font-size: $unit-s;
+        }
+      }
     }
   }   
   
   .illustration1{
     grid-area: illustration1;
     place-self: center end;
-    max-width: 25vw;
+    max-width: 55vh;
     height: auto;
     width: 100%;
+
+    @media only screen and (max-width: $width-tablet){
+      max-width: 40vh;
+    place-self: center center;
+    }
   }
+
+  .scrolldown{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: $font-primary;
+    font-size: $unit-m;
+    text-decoration: none;
+    color: $color-secondary;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding:  $unit-m;
+
+    svg{
+      fill: $color-secondary;
+      height: $unit-l;
+      height: $unit-l;
+      margin-bottom: $unit-xs;
+      transition: all .2s;
+    }
+
+    &:hover{
+      svg{
+        margin-bottom: .3rem;
+      }
+    }
+
+    @media only screen and (max-width: $width-tablet){
+      display: none;
+    }
+  }
+
 
   /* SOCIAL MEDIA BUTTONS */
   .smnav ul{
@@ -62,8 +139,94 @@
       
     svg{
       display: block;
+      fill: $color-primary;
       width: $unit-xl;
       height: $unit-xl;
-    }      
+      transition: fill 0.2s;
+    } 
+
+    a:hover, a:active{
+      svg{
+        fill: $color-primary-dark;
+      }
+    }
+  }
+
+
+  /* INTRODUCTION */
+  .illustration2{
+    grid-area: illustration2;
+    place-self: center start;
+
+    @media only screen and (max-width: $width-tablet){
+      max-width: 50vh;
+      place-self: center center;
+      margin-top: $unit-xxl;
+    }
+
+  }
+
+  #intro{
+    grid-area: intro;
+    padding: $unit-xxxl 0;
+
+    @media only screen and (max-width: $width-tablet){
+      margin: $unit-xxl 0;
+
+      h2{
+              text-align: center;
+      }
+    }
+  }
+
+  .bg_intro{
+    grid-column: 1 / 13;
+    grid-row: 3 / 4;
+    z-index: -1;
+    background-color: $color-secondary-light3;
+
+    @media only screen and (max-width: $width-tablet){
+      grid-row: 4 / 6;
+    }
+  }
+
+
+  /* PORTFOLIO */
+  #portfolio{
+    grid-area: portfolio;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; 
+    margin: $unit-xxxl 0;
+
+    p{
+      max-width: 40rem;
+      margin-bottom: 0;
+    }
+
+    .illustration3{
+      max-width: 60vh;
+      margin: $unit-xxl 0;
+    }
+  }
+
+
+  /* CTA */
+  #cta{
+    grid-area: cta;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; 
+    background-color: $color-tertiary;
+    padding: $unit-xxl 0;
+    margin-bottom: $unit-xxxl;
+  
+    h2, p{
+      color: $color-quaternary;
+      margin-left: $unit-s;
+      margin-right: $unit-s;
+    }
   }
 } 

@@ -7,14 +7,12 @@
 	.st1{fill:#0F4D63;}
 	.st2{fill:#2B2B2B;}
 </style>
-<rect x="175.9" y="-233.5" class="st0" width="616" height="372.7"/>
-<text transform="matrix(1 0 0 1 175.8688 -69.7333)" style="display:none;fill:#2B2B2B;enable-background:new    ; font-family:'BebasNeue-Regular'; font-size:234px;">JHEIN</text>
-<g>
-	<path class="st1" d="M0,243.6v-34.8c3.7,0.9,7.9,1.4,12.5,1.4c7.7,0,13.4-1.9,17.1-5.7c3.7-3.8,5.6-9.7,5.6-17.6V0h38.3v185.8
+
+<path class="st1" d="M0,243.6v-34.8c3.7,0.9,7.9,1.4,12.5,1.4c7.7,0,13.4-1.9,17.1-5.7c3.7-3.8,5.6-9.7,5.6-17.6V0h38.3v185.8
 		c0,20-4.6,34.8-13.8,44.5s-23.2,14.6-42,14.6C10.8,245,4.9,244.5,0,243.6z"/>
-	<path class="st2" d="M183.9,0h104.5v35h-66.2v64.8h52.6v35h-52.6V210h66.2v35H183.9V0z"/>
-	<path class="st2" d="M315,0h38.3v245H315V0z"/>
-	<path class="st2" d="M379.8,0h48.1l37.3,146.7h0.7V0H500v245h-39.4l-46-178.9H414V245h-34.1V0H379.8z"/>
-	<polygon class="st2" points="119,0 119,99.8 79.4,99.8 79.4,134.7 119,134.7 119,245 157.4,245 157.4,0 	"/>
-</g>
+<path class="st2" d="M183.9,0h104.5v35h-66.2v64.8h52.6v35h-52.6V210h66.2v35H183.9V0z"/>
+<path class="st2" d="M315,0h38.3v245H315V0z"/>
+<path class="st2" d="M379.8,0h48.1l37.3,146.7h0.7V0H500v245h-39.4l-46-178.9H414V245h-34.1V0H379.8z"/>
+<polygon class="st2" points="119,0 119,99.8 79.4,99.8 79.4,134.7 119,134.7 119,245 157.4,245 157.4,0 	"/>
+
 </svg>

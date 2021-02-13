@@ -62,14 +62,14 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       title: "Leistungen von Jessica Hein",
-      description:"Illustrationen, Grafik- und Webdesigns sind teil des Leistungsspektrums von Jessica Hein.",
+      description:"Illustrationen, Grafik- und Webdesigns sind Teil des Leistungsspektrums von Jessica Hein.",
       template: "src/leistungen.html",
       filename: "leistungen.html",
       favicon: "src/favicons/favicon.ico",
     }),
     new HtmlWebpackPlugin({
       title: "Portfolio von Jessica Hein",
-      description:"Das Portfolio von Jessica Hein enthält diverse digitale und Printprojekte.",
+      description:"Das Portfolio von Jessica Hein enthält diverse Digital- und Printprojekte.",
       template: "src/portfolio.html",
       filename: "portfolio.html",
       favicon: "src/favicons/favicon.ico",

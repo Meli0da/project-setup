@@ -11,13 +11,13 @@
     <link rel="stylesheet" href="index.css" />
   </head>
 
-  <body id="main">
-
+  <body id="main" class="index">
       <!-- HEADER  -->
       <%= require('html-loader!./partials/header.html') %>
 
+
       <!-- HEROIMAGE  -->
-      <section class="heroimage" >
+      <section id="heroimage" >
           <p>Jessica Hein <span>Illustrator, Grafikdesigner & Webdesigner</span></p>
           <nav class="smnav">
             <ul>
@@ -30,15 +30,48 @@
 
       <img class="illustration1" src="images/jessie.svg" alt="Illustration von Jessica Hein">
 
+      <a class="scrolldown smoothscroll" href="#intro" title="Nach unten gelangen"><svg xmlns="http://www.w3.org/2000/svg"><use xlink:href="#arrow"/></svg><span>scroll down</span></a>
 
-      <!-- INTRODUCTION  
-      <section class="bg_secondary">
-        <h2>Erste Überschrift</h2>
-        <P>Platzhaltertext</P>
-      </section>-->
 
-      <!-- FOOTER 
-      <%= require('html-loader!./partials/footer.html') %> -->
+      <!-- INTRODUCTION --> 
+      <img class="illustration2" src="images/smartphone.svg" alt="Illustration eines Smartphones mit Designelementen">
 
+      <section id="intro">
+        <h2>- Meine Motivation - <span>Gutes Design bleibt im Gedächtnis</span></h2>
+        <P>Sehen ist für den Menschen der wohl wichtigste Teil der Wahr&shy;nehmung. Nicht ohne Grund nehmen wir etwa 80% userer Informationen über die Augen auf. Und so ist es kaum verwun&shy;derlich, dass wir schon seit frühster Zeit auf Ästhetik Wert legen. Ohne Gestaltung geht heute fast nichts mehr. Doch ist es denn auch immer gute Gestaltung?</P>
+        <p>“Form follows function” (deutsch: Die Form folgt der Funktion) ist ein Leitsatz, den man in der Gestaltung oft hört und auch immer beachten sollte. Die Balance zwischen Ästhetik und Funktion macht gutes Design aus. Was nützt eine Illu&shy;stration deren Bedeutung nicht klar ist, oder eine Website auf der man keine Infor&shy;mationen findet?</p>
+        <p class="strong">Mein Anspruch: Nutzer&shy;freund&shy;liches Design, welches sich von der Masse an standard&shy;isierten Design abhebt und im Gedächtnis bleibt!</p>
+
+        <div class="btns">
+          <a class="btn _primary" href="ueber-mich.html" title="Mehr über mich erfahren">Mehr über mich</a>
+          <a class="btn _tertiary" href="leistungen.html" title="Mein Leistungsangebot kennen lernen">Meine Leistungen</a>
+        </div>
+      </section>
+
+      <div class="bg_intro"></div>
+
+
+      <!-- PORTFOLIO --> 
+      <section id="portfolio">
+        <h2>- Mein Portfolio - <span>verschaff Dir einen Überblick</span></h2>
+        <P>Illustrationen, Logos, Plakate und Webdesigns. Bei mir findest Du viele spannende Designs zu diversen Themen und Branchen. </P>
+       
+        <img class="illustration3" src="images/referenzen.svg" alt="Illustration eines Smartphones mit Designelementen">
+
+        <a class="btn _primary" href="portfolio.html" title="Mein Portfolio entdecken">Portfolio ansehen</a>
+      </section>
+
+
+      <!-- CALL TO ACTION --> 
+      <section id="cta">
+        <h2>- Interesse geweckt? -</h2>
+        <P>Dann zögere nicht, mir per Kontaktformular oder E-Mail eine Nachricht zu hinterlassen.<br/>Ich freue mich schon über unsere Zusammenarbeit!</P>
+      
+        <a class="btn _quaternary" href="kontakt.html" title="Zur Kontaktseite wechseln">Kontakt aufnehmen</a>
+      </section>
+
+   
+      <!-- FOOTER -->
+      <%= require('html-loader!./partials/footer.html') %> 
   </body>
 </html>

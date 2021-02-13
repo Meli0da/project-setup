@@ -1,28 +1,93 @@
 #footer {
-  padding-top: $unit-xl;
-  background-color: $color-primary-light;
+  grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $color-primary;
+  border-radius: .25rem;
+  padding: $unit-xxl 0;
 
-  .smnav ul, .footernav ul{
-    display: flex;
-    justify-content: center;
+  @media only screen and (max-width: $width-mini){
+    svg{
+      height: 4rem;
+    }
 
-    li{
-      padding: 0 $unit-s;
+    .footernav{
+      ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        li{
+          padding: $unit-xs 0;
+        }
+      }
+  
+      hr{
+        width: $unit-m;
+        height: 2px;
+      }
     }
   }
 
-  .smnav{
-    padding-bottom: $unit-xl;
+
+  /* LOGO */
+  svg{
+    height: 6rem;
+    fill: $color-quaternary;
   }
 
-  .footernav{
-   background-color: $color-primary;
-    padding:  $unit-s 0;
 
-    a{
-      font-family: $font-secondary;
-      color: $color-tertiary;
-      text-decoration: none;
+  /* SOCIAL MEDIA */
+  .smnav{
+    margin: $unit-xxl ;
+    
+    ul{
+      width: 14rem;
+
+      li svg{
+        fill: $color-quaternary;
+
+        &:hover{
+          fill: $color-secondary-light2;
+        }
+      }
+    }
+  }
+
+
+  /* FOOTERNAVIGATION */
+  .footernav{
+    ul{
+      display: flex;
+      align-items: center;
+
+      li{
+        padding: 0 $unit-s;
+
+        a{
+          font-family: $font-secondary;
+          text-transform: uppercase;
+          color: $color-quaternary;
+          text-decoration: none;
+          transition: color .2s;
+
+          &:hover, &.active,
+          body.kontakt &.kontakt,
+          body.impressum &.impressum,
+          body.datenschutz &.datenschutz{
+            color: $color-secondary-light2;
+          }
+        } 
+      }
+    }
+
+    hr{
+      width: 2px;
+      height: $unit-m;
+      background: $color-primary-dark;
+      border: none;
+      margin: 0;
     }
   }
 }

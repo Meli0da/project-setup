@@ -1,8 +1,10 @@
 /* SIZES */
 $width-wrapper: 2000px;
+$width-maxi: 1600px;
 $width-laptop: 1100px;
 $width-tablet: 900px;
 $width-phone: 600px;
+$width-mini: 450px;
 
 
 /* UNITS */
@@ -17,7 +19,7 @@ $unit-xxxl: 8rem;
 
 /* COLORS */
 $color-primary: #0F4D63;
-$color-primary-light: #4F8DA3;
+$color-primary-dark: #052c3a;
 
 $color-secondary: #2B2B2B;
 $color-secondary-light: #555555;
@@ -25,7 +27,7 @@ $color-secondary-light2: #A5A5A5;
 $color-secondary-light3: #E1E1E1;
 
 $color-tertiary: #EE781E;
-$color-tertiary-light: #FFA561;
+$color-tertiary-dark: #D26013;
 
 $color-quaternary: #FFFFFF;
 

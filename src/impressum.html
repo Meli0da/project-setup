@@ -2,6 +2,7 @@
 <html>
   <head>
     <%= require('html-loader!./partials/head.html') %>
+    <%= require('html-loader!./partials/icons.html') %>
     <!-- SPECIFICS  -->
     <meta name="robots" content="index,follow">
     <title><%= htmlWebpackPlugin.options.title %></title>
@@ -10,7 +11,7 @@
     <link rel="stylesheet" href="index.css" />
   </head>
 
-  <body id="main">
+  <body id="main" class="impressum">
 
       <!-- HEADER  -->
       <%= require('html-loader!./partials/header.html') %>

@@ -1,9 +1,9 @@
 console.log("js loaded");
 
+
+// MOBILE NAVIGATION //
 const openClass="open"
-
 let isOpen = false
-
 function onMenuButtonClick(event){
     
     if(isOpen){
@@ -21,10 +21,8 @@ function onMenuButtonClick(event){
         isOpen = true
     }
 }
-
-const buttons = document.getElementsByClassName("btn")
+const buttons = document.getElementsByClassName("mobbtn")
 for(const button of buttons){
     button.addEventListener("click",onMenuButtonClick)
 }
-
 const mobileNav = document.getElementsByClassName("mobilenav")[0]
